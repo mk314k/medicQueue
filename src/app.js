@@ -132,8 +132,8 @@ App = {
       const loader = $('#loader')
       const content = $('#content')
       if (boolean) {
-        loader.show()
-        content.hide()
+        loader.hide()
+        content.show()
       } else {
         loader.hide()
         content.show()
@@ -143,6 +143,7 @@ App = {
   
   $(() => {
     $(window).load(() => {
+      App.setLoading()
       App.load()
     })
   })

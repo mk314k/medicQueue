@@ -4,45 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HackBoston</title>
-
-    <!-- Bootstrap -->
-    <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <style>
-      main {
-        margin-top: 60px;
-      }
-
-      #content {
-        display: none;
-      }
-
-      form {
-        width: 350px;
-        margin-bottom: 10px;
-      }
-
-      ul {
-        margin-bottom: 0px;
-      }
-
-      #completedTaskList .content {
-        color: grey;
-        text-decoration: line-through;
-      }
-    </style>
+    <title>MediQueue</title>
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="" target="_blank">Hack Boston</a>
+    <nav>
+      <a class="nav-title" href="" target="_blank">Hack Boston</a>
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap d-none d-sm-none d-sm-block">
           <small><a class="nav-link" href="#"><span id="account"></span></a></small>
@@ -57,10 +24,42 @@
           </div>
           <div id="content">
             <form onSubmit="App.newPatient(); return false;">
-              <input id="newTask" type="text" class="form-control" placeholder="Add Patient..." required>
+              <input id="newTask" type="text" class="form-control" placeholder="Patient Add Yourself to the queue..." required>
               <input type="submit" hidden="">
             </form>
             <ul id="patientList" class="list-unstyled">
+              <table>
+                <tr>
+                  <th>Claim Status</th>
+                  <th>Patient Name</th>
+                  <th>Waiting Since</th>
+                  <th>Coin Earned</th>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>Melon Usk</td>
+                  <td>12:00:01</td>
+                  <td>3.40001 Telos</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>Gill Bates</td>
+                  <td>12:10:11</td>
+                  <td>2.7046 Telos</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>Jeve Sobs</td>
+                  <td>12:11:20</td>
+                  <td>2.7021 Telos</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>Kalman San</td>
+                  <td>12:21:01</td>
+                  <td>0.405 Telos</td>
+                </tr>
+              </table>
               <div class="patientTemplate" class="checkbox" style="display: none">
                 <label>
                   <input type="checkbox" />
@@ -76,11 +75,8 @@
         </main>
       </div>
     </div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/web3/dist/web3.min.js"></script>
     <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
     <script src="app.js"></script>
   </body>

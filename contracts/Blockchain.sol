@@ -27,9 +27,9 @@ contract Blockchain{
         bool visited
     );
 
-    // constructor() public {
-    //     //createTask("Check out dappuniversity.com");
-    // }
+    constructor() public{
+        newPatient("test");
+    }
 
     function newPatient(string memory _patientName) public {
         totalPatient ++;
