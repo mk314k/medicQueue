@@ -1,28 +1,63 @@
+body{
+  background-color: rgb(185, 181, 181);
+}
 nav{
-    background-color: gray;
-    display: flex;
-    flex-direction: horizontal;
+    background-color: rgb(17, 151, 22);
+    display: grid;
+    max-height: 100px;
+}
+nav h1 {
+  grid-area: 1/1/span 1/span 1;
+}
+nav #account{
+  position: relative;
+  top: 20%;
+  text-align: center;
+  grid-area: 1/9/span 1/ span 1;
+  text-overflow: clip;
+  width: 200px;
+  overflow-wrap: break-word;  
+  word-wrap: break-word; 
+  word-break: break-word;
 }
 
+nav button{
+  position: relative;
+  top: 10px;
+  grid-area: 1/ 10/ span 1/span 1;
+  vertical-align: middle;
+  height: 50px;
+}
 
-main {
-    margin-top: 60px;
-  }
-
-  #content {
-    display: none;
-  }
-
-  form {
-    width: 350px;
-    margin-bottom: 10px;
-  }
-
-  ul {
-    margin-bottom: 0px;
-  }
-
-  #completedTaskList .content {
-    color: grey;
-    text-decoration: line-through;
-  }
+.form{
+  border: 3px double green;
+  background-color: white;
+}
+.form input {
+  height: 24px;
+  width: 60%;
+  border-radius: 10%;
+}
+.form label {
+  position: relative;
+  left: -20%;
+}
+.form button{
+  height: 50px;
+  width: 80px;
+  border-radius: 20%;
+}
+.form p{
+  position: relative;
+  left: 10%;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  padding-top: 30%;
+}
+ .message{
+  font-size: 24px;
+ }

@@ -9,72 +9,13 @@
   </head>
   <body>
     <nav>
-      <a class="nav-title" href="" target="_blank">Hack Boston</a>
-      <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap d-none d-sm-none d-sm-block">
-          <small><a class="nav-link" href="#"><span id="account"></span></a></small>
-        </li>
-      </ul>
+      <h1>MedicQueue</h1>
+      <button id ="docState">I am Doctor</button>
+      <span id="account"></span>
     </nav>
-    <div class="container-fluid">
-      <div class="row">
-        <main role="main" class="col-lg-12 d-flex justify-content-center">
-          <div id="loader" class="text-center">
-            <p class="text-center">Loading...</p>
-          </div>
-          <div id="content">
-            <form onSubmit="App.newPatient(); return false;">
-              <input id="newTask" type="text" class="form-control" placeholder="Patient Add Yourself to the queue..." required>
-              <input type="submit" hidden="">
-            </form>
-            <ul id="patientList" class="list-unstyled">
-              <table>
-                <tr>
-                  <th>Claim Status</th>
-                  <th>Patient Name</th>
-                  <th>Waiting Since</th>
-                  <th>Coin Earned</th>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>Melon Usk</td>
-                  <td>12:00:01</td>
-                  <td>3.40001 Telos</td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>Gill Bates</td>
-                  <td>12:10:11</td>
-                  <td>2.7046 Telos</td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>Jeve Sobs</td>
-                  <td>12:11:20</td>
-                  <td>2.7021 Telos</td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>Kalman San</td>
-                  <td>12:21:01</td>
-                  <td>0.405 Telos</td>
-                </tr>
-              </table>
-              <div class="patientTemplate" class="checkbox" style="display: none">
-                <label>
-                  <input type="checkbox" />
-                  <span class="patientName">Patient Name goes here...</span>
-                  <span class="patientStartTime">Patient Start Time goes here...</span>
-                  <span class="patientCoins">Patient Coins goes here...</span>
-                </label>
-              </div>
-            </ul>
-            <ul id="completedTaskList" class="list-unstyled">
-            </ul>
-          </div>
-        </main>
-      </div>
-    </div>
+    <div id="root"></div>
+
+    <script src="main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="vendor/web3/dist/web3.min.js"></script>
     <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
